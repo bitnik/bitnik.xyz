@@ -1,10 +1,22 @@
-@media print {
-    body {
-        font-size: 19px;
-    }
+.page {
+    background-color: #d2fcd2;
+}
 
+.photo {
+    max-height: 150px;
+    border: 0 solid #fff;
+    border-radius: 100%;
+    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+}
+
+/* https://www.tutorialspoint.com/css/css_printing.htm */
+@media print {
     .screen {
         display: none;
+    }
+
+    body {
+        font-size: 19px;
     }
 
     .card {
@@ -16,18 +28,43 @@
     }
 
     .badge {
-        border: 0.07rem solid #868e96;
-    }
-
-    .badge-primary {
-        color: inherit;
-        background-color: inherit;
+        border: 0.07rem solid #000000;
+        color: #000000;
+        background-color: #f0f0f0;
     }
 }
 
 @media not print {
     .print {
         display: none;
+    }
+
+    .index-body {
+        background-color: #B5BC85;
+        /*
+        background-image: url("a.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 1px solid red;
+        width: 100%;
+        */
+    }
+    .index-body h1, .index-body a:link, .index-body a:visited, .index-body a:hover, .index-body a:active {
+        color: #7a3e7a;
+    }
+    
+    .cv-body .non-link-fact, .cv-body a:link, .cv-body a:visited, .cv-body a:hover, .cv-body a:active {
+        color: #a759ff;
+    }
+
+    .badge {
+        color: #ffffff;
+        background-color: #a759ff;
+    }
+
+    .card {
+        background-color: #e8ffe8;
+        border: 1px solid #d2fcd2;
     }
 
     @media (min-width: 576px) {
@@ -53,9 +90,9 @@
         font-weight: normal;
     }
 
-    strong {
+    /*strong {
         font-weight: 500;
-    }
+    }*/
 }
 
 a .fa {
